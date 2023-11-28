@@ -1,0 +1,2 @@
+-   Created Next project with Shadcn UI (npx create-next-app@13.4.12 promaster-lms --typescript --tailwind --eslint)
+-   Run Shadcn CLI (npx shadcn-ui@latest init)
