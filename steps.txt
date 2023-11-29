@@ -16,3 +16,6 @@
 -   Create dashboard layout
 -   Create the sidebar within the (dashboard) file structure
 -   Create the constants file to store all constants details
+-   Create the Navbar component
+-   Create the mobile sidebar component
+-   Create NavbarRoutes in the components folder for reuse later
