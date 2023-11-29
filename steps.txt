@@ -19,3 +19,4 @@
 -   Create the Navbar component
 -   Create the mobile sidebar component
 -   Create NavbarRoutes in the components folder for reuse later
+-   Create the route for Teacher mode
