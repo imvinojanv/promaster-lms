@@ -11,3 +11,8 @@
 -   Create the Signin and Signup pages and add URLs in .env file
 -   Add Clerk userButton to the home pages
 -   Change custom url for routes and change middleware
+-   Check the Signin or Signup working
+
+-   Create dashboard layout
+-   Create the sidebar within the (dashboard) file structure
+-   Create the constants file to store all constants details
