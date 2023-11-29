@@ -2,4 +2,12 @@
 -   Run Shadcn CLI (npx shadcn-ui@latest init)
 -   Install Next.nav on VScode.
 -   Create folder structure with route groups
+
 -   Create and account with Clerk and Create new project
+-   Add .env file to root of the project
+-   Install clerk to the project (npm install @clerk/nextjs)
+-   Wrap the main layout with ClerkProvider from '@clerk/nextjs'
+-   Create the middlewate.ts to protect the dashboard
+-   Create the Signin and Signup pages and add URLs in .env file
+-   Add Clerk userButton to the home pages
+-   Change custom url for routes and change middleware
