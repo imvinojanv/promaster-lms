@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <div>
-      Hello Vinojan
+      This is protected page
     </div>
   )
 }
