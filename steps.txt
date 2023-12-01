@@ -51,3 +51,8 @@
 ### Course Edit Page UI
 -   Fetch the course data
 -   Create a icon-badge component varient as same like Shadcn component with the standard way
+
+### Course Title Form
+-   Create _component folder into the [courseId]
+-   Create the TitleForm component
+-   Create api for PATCH request. (course/[courseId]/route.ts)
