@@ -56,3 +56,6 @@
 -   Create _component folder into the [courseId]
 -   Create the TitleForm component
 -   Create api for PATCH request. (course/[courseId]/route.ts)
+
+### Course Description Form
+-   Add textarea from shadcn

@@ -8,6 +8,7 @@ import { Pencil } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { Course } from "@prisma/client";
 
 import {
     Form,
@@ -16,26 +17,25 @@ import {
     FormItem,
     FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Textarea } from "@/components/ui/textarea";
 
-interface TitleFormProps {
-    initialData: {
-        title: string;
-    };
+interface DescriptionFormProps {
+    initialData: Course;
     courseId: string;
 };
 
 const formSchema = z.object({
-    title: z.string().min(1, {
-        message: "Title is required",
+    description: z.string().min(1, {            // changed
+        message: "Description is required",
     }),
 });
 
-export const TitleForm = ({
+const DescriptionForm = ({
     initialData,
     courseId
-}: TitleFormProps) => {
+}: DescriptionFormProps) => {
 
     const [isEditing, setIsEditing] = useState(false);
 
@@ -43,9 +43,11 @@ export const TitleForm = ({
 
     const router = useRouter();
 
-    const form = useForm<z.infer<typeof formSchema>>({
+    const form = useForm<z.infer<typeof formSchema>>({          // changed
         resolver: zodResolver(formSchema),
-        defaultValues: initialData,
+        defaultValues: {
+            description: initialData?.description || ""
+        },
     });
 
     const { isSubmitting, isValid } = form.formState;
@@ -64,7 +66,7 @@ export const TitleForm = ({
     return (
         <div className="mt-6 border bg-slate-100 rounded-md p-4">
             <div className="font-medium flex items-center justify-between">
-                Course title
+                Course description                                              {/* changed */}
                 <Button onClick={toggleEdit} variant="ghost">
                     {isEditing ? (
                         <div className="text-red-600">
@@ -73,15 +75,19 @@ export const TitleForm = ({
                     ) : (
                         <>
                             <Pencil className="h-4 w-4 mr-2" />
-                            Edit
+                            Edit                        {/* changed */}
                         </>
                     )}
                 </Button>
             </div>
 
-            {!isEditing && (
-                <p className="text-sm mt-2">
-                    {initialData.title}
+            {/* changed */}
+            {!isEditing && (                        
+                <p className={cn(                   
+                    "text-sm mt-2",
+                    !initialData.description && "text-slate-500 italic"
+                )}>
+                    {initialData.description || "No description"}
                 </p>
             )}
 
@@ -93,13 +99,13 @@ export const TitleForm = ({
                     >
                         <FormField
                             control={form.control}
-                            name="title"
+                            name="description"          // changed
                             render={({ field }) => (
                                 <FormItem>
                                     <FormControl>
-                                        <Input
+                                        <Textarea
                                             disabled={isSubmitting}
-                                            placeholder="e.g. 'Advanced web development'"
+                                            placeholder="e.g. 'This course is about...'"
                                             {...field}
                                         />
                                     </FormControl>
@@ -122,4 +128,4 @@ export const TitleForm = ({
     )
 }
 
-export default TitleForm
+export default DescriptionForm
