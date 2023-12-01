@@ -1,8 +1,10 @@
+### Get Started
 -   Created Next project with Shadcn UI (npx create-next-app@13.4.12 promaster-lms --typescript --tailwind --eslint)
 -   Run Shadcn CLI (npx shadcn-ui@latest init)
 -   Install Next.nav on VScode.
 -   Create folder structure with route groups
 
+### Clerk Authentication
 -   Create and account with Clerk and Create new project
 -   Add .env file to root of the project
 -   Install clerk to the project (npm install @clerk/nextjs)
@@ -13,6 +15,7 @@
 -   Change custom url for routes and change middleware
 -   Check the Signin or Signup working
 
+### Layout the dashboard UI
 -   Create dashboard layout
 -   Create the sidebar within the (dashboard) file structure
 -   Create the constants file to store all constants details
@@ -20,3 +23,9 @@
 -   Create the mobile sidebar component
 -   Create NavbarRoutes in the components folder for reuse later
 -   Create the route for Teacher mode
+-   Create New course page (/teacher/create)
+-   Add Form, Input from Shadcn
+-   Install axios
+-   Design the form component for create course page and add the toast alert by installing it (react-hot-toast)
+-   Create the toaster provider inside the component folder and import and return the Toaster from react-hot-toast
+-   import ToasterProvider (from component folder) into the main layout
