@@ -47,3 +47,7 @@
 -   Test the application is running correctly
 -   Check the created tables, run prisma studio (npx prisma studio)
 -   Create the individual course page by using dynamic routes
+
+### Course Edit Page UI
+-   Fetch the course data
+-   Create a icon-badge component varient as same like Shadcn component with the standard way
