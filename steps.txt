@@ -40,3 +40,10 @@
 -   Create models for Course, Attachment and Category in prisma.schema
 -   Generate prisma everytime you play around with prisma (npx prisma generate) - Locally
 -   Push the generated schema to database (npx prisma db push) - to Planetscale
+
+### Course Creation API
+-   Create app/api/courses/route.ts
+-   Create the POST route to 'Create Course'
+-   Test the application is running correctly
+-   Check the created tables, run prisma studio (npx prisma studio)
+-   Create the individual course page by using dynamic routes
