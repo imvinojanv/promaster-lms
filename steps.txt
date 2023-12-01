@@ -29,3 +29,14 @@
 -   Design the form component for create course page and add the toast alert by installing it (react-hot-toast)
 -   Create the toaster provider inside the component folder and import and return the Toaster from react-hot-toast
 -   import ToasterProvider (from component folder) into the main layout
+
+### Prisma & DB Setup 
+-   Install Prisma (npm i -D prisma)
+-   installing the Prisma into our project (npz prisma init)
+-   Create a database in Planetscale
+-   Copy and Paste .env and prisma.schema
+-   Create db.ts file into the lib folder
+-   Install prisma client (npm i @prisma/client)
+-   Create models for Course, Attachment and Category in prisma.schema
+-   Generate prisma everytime you play around with prisma (npx prisma generate) - Locally
+-   Push the generated schema to database (npx prisma db push) - to Planetscale
