@@ -72,7 +72,18 @@
 -   Create uploadthing component in lib folder
 -   Create file-upload component in the main components folder
 -   Copy the description-form.tsx and paste it as image-form.tsx and make some changes
+-   Import image-form into page.tsx
 -   Update tailwind.config.js file for uploadthing
 -   Add the host name into the next.config.js, Getting an error while fetching the image from uploadthing
 -   Updated the middleware.ts to fix the auth error
 Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/page.tsx, image-form.tsx, api/uploadthing/core.ts & /route.ts, components/file-upload.tsx, lib/uploadthing.ts
+
+### Course Category Form
+-   To use the 'Combobox' from Shadcn, have to add Command and Popover components from Shadcn
+-   Copy and Create new combobox component in components/ui and Modify bit
+-   Fetch the Categories data from the db in teacher/../[courseId]/page.tsx
+-   Create a script file (script/seed.ts) to create all categories - bcz there is no any way to create the categories through the form([courseId]/page.tsx)
+-   Run the script file to seed the data to database (`node script/seed.ts)
+-   Copy the description-form and paste is as category-form into the _component folder
+-   Import category-form into page.tsx
+-   Use Combobox component into the category-form

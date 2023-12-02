@@ -7,6 +7,7 @@ import { IconBadge } from "@/components/icon-badge";
 import TitleForm from "./_components/title-form";
 import DescriptionForm from "./_components/description-form";
 import ImageForm from "./_components/image-form";
+import CategoryForm from "./_components/category-form";
 
 const CourseIdPage = async ({
   // Every server component inside this folder can access the params
@@ -21,10 +22,18 @@ const CourseIdPage = async ({
     return redirect("/");
   }
 
+  // Fetch courses
   const course = await db.course.findUnique({
     where: {
       id: params.courseId
     }
+  });
+
+  // Fetch categories
+  const categories = await db.category.findMany({
+    orderBy: {
+      name: "asc",
+    },
   });
 
   // If don't find the course
@@ -76,6 +85,15 @@ const CourseIdPage = async ({
           <ImageForm
             initialData={course}
             courseId={course.id}
+          />
+          <CategoryForm
+            initialData={course}
+            courseId={course.id}
+            // Categories are revieved as 'id' and 'name', but in here we work with 'value' and 'label', So need to convert them as 'value' and 'label'
+            options={categories.map((category) => ({
+              label: category.name,
+              value: category.id
+            }))}
           />
         </div>
       </div>
