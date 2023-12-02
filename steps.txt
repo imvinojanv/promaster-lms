@@ -59,3 +59,20 @@
 
 ### Course Description Form
 -   Add textarea from shadcn
+-   Copy the title-form.tsx page and modified as for the description (description-form.tsx)
+
+### UploadThing & Image Form
+-   Create an account on UploadThing and 'Create a new app'
+-   Install some packages according to the UploadThing docs (https://docs.uploadthing.com/getting-started/appdir)
+    (uploadthing, @uploadthing/react, react-dropzone)
+-   Add .env variable
+-   Create app/api/uploadthing/core.ts copy and paste the code from the docs
+-   Modify the code as per our requirements
+-   Create route.ts inside the uploadthing folder
+-   Create uploadthing component in lib folder
+-   Create file-upload component in the main components folder
+-   Copy the description-form.tsx and paste it as image-form.tsx and make some changes
+-   Update tailwind.config.js file for uploadthing
+-   Add the host name into the next.config.js, Getting an error while fetching the image from uploadthing
+-   Updated the middleware.ts to fix the auth error
+Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/page.tsx, image-form.tsx, api/uploadthing/core.ts & /route.ts, components/file-upload.tsx, lib/uploadthing.ts

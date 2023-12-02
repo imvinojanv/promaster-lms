@@ -8,7 +8,7 @@ import { Pencil } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { Course } from "@prisma/client";
+import { Course } from "@prisma/client";                // changed
 
 import {
     Form,
@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
 
 interface DescriptionFormProps {
-    initialData: Course;
+    initialData: Course;                       // changed
     courseId: string;
 };
 
@@ -75,7 +75,7 @@ const DescriptionForm = ({
                     ) : (
                         <>
                             <Pencil className="h-4 w-4 mr-2" />
-                            Edit                        {/* changed */}
+                            Edit
                         </>
                     )}
                 </Button>
@@ -103,6 +103,7 @@ const DescriptionForm = ({
                             render={({ field }) => (
                                 <FormItem>
                                     <FormControl>
+                                        {/* changed */}
                                         <Textarea
                                             disabled={isSubmitting}
                                             placeholder="e.g. 'This course is about...'"
