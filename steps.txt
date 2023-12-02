@@ -84,6 +84,11 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Fetch the Categories data from the db in teacher/../[courseId]/page.tsx
 -   Create a script file (script/seed.ts) to create all categories - bcz there is no any way to create the categories through the form([courseId]/page.tsx)
 -   Run the script file to seed the data to database (`node script/seed.ts)
--   Copy the description-form and paste is as category-form into the _component folder
+-   Copy the description-form and paste is as category-form into the _component folder and modify some changes
 -   Import category-form into page.tsx
 -   Use Combobox component into the category-form
+
+### Course Price Form
+-   Layout the structure for 'course chapters' and 'course price'
+-   Copy the description-form and paste is as price-form into the _component folder  and modify some changes
+-   Create lib/format.ts file to Change the price format with $ sign
