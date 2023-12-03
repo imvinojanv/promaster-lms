@@ -92,3 +92,12 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Layout the structure for 'course chapters' and 'course price'
 -   Copy the description-form and paste is as price-form into the _component folder  and modify some changes
 -   Create lib/format.ts file to Change the price format with $ sign
+
+### Course Attachment Form
+-   Layout the structure for 'course Attachment'
+-   Copy the image-form and paste is as attachment-form into the _component folder
+-   Includes attachments to the courses which we fetched from the db in page.tsx
+-   modify some changes on attachment-form
+-   Create a new api route for attachments  ([courseId]/attachments)
+-   Show the files which will be uploaded with delete button
+-   Create a new api route for attachment ID to delete
