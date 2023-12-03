@@ -101,3 +101,13 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Create a new api route for attachments  ([courseId]/attachments)
 -   Show the files which will be uploaded with delete button
 -   Create a new api route for attachment ID to delete
+
+### Prisma Schema Finalization
+-   Create the model for Chapter
+-   Create the model for MuxData
+-   Create the model for UserProgress
+-   Make all relations properly
+-   Create the model for Purchase
+-   Create the model for StripeCustomer
+-   `npx prisma generate` to add all of those new models inside of our db util
+-   `npx prisma db push` to push the changes to Planetscale database
