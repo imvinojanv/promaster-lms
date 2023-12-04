@@ -111,3 +111,10 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Create the model for StripeCustomer
 -   `npx prisma generate` to add all of those new models inside of our db util
 -   `npx prisma db push` to push the changes to Planetscale database
+
+### Chapter Creation API
+-   Copy the description-form and paste is as chapters-form into the _component folder  and modify some changes
+-   Includes chapters as well to the courses which we fetched from the db in page.tsx
+-   Update the requiredFields (5/6)
+-   Added some additional changes in chapter-form
+-   Create a new api route for chapters (../[courseId]/chapters/route.ts)
