@@ -118,3 +118,11 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Update the requiredFields (5/6)
 -   Added some additional changes in chapter-form
 -   Create a new api route for chapters (../[courseId]/chapters/route.ts)
+
+### Chapter Reorder Functionality
+-   Create chapters-list component into _component folder
+-   Install the Drag and Drop package (npm i @hello-pangea/dnd)
+-   Add badge from shadcn
+-   Create onReorder and onEdit function to update the bulk data to the db (chapters-form.tsx)
+-   Create a new api route for reorder (../[courseId]/chapters/reorder/route.ts)
+-   Add the loading state to indicate reordering the chapters list (chapters-form.tsx)
