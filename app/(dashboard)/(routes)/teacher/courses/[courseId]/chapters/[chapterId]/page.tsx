@@ -8,6 +8,7 @@ import { IconBadge } from "@/components/icon-badge";
 
 import ChapterTitleForm from "./_components/chapter-title-form";
 import ChapterDescriptionForm from "./_components/chapter-description-form";
+import ChapterAccessForm from "./_components/chapter-access-form";
 
 const ChapterIdPage = async ({
     params,
@@ -86,7 +87,21 @@ const ChapterIdPage = async ({
                             courseId={params.courseId}
                             chapterId={params.chapterId}
                         />
-                        <ChapterDescriptionForm 
+                        <ChapterDescriptionForm
+                            initialData={chapter}
+                            courseId={params.courseId}
+                            chapterId={params.chapterId}
+                        />
+                    </div>
+
+                    <div>
+                        <div className="flex items-center gap-x-2">
+                            <IconBadge icon={Eye} />
+                            <h2 className="text-xl">
+                                Access Settings
+                            </h2>
+                        </div>
+                        <ChapterAccessForm
                             initialData={chapter}
                             courseId={params.courseId}
                             chapterId={params.chapterId}

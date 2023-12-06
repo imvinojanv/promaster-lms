@@ -144,3 +144,8 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   The chapter description is working fine
 -   Get the preview using the preview component in page.tsx
 -   Add some css to change the style of Preview component text (global.css)
+
+### Chapter Access Form - FREE/PAYMENT
+-   Copy the chapter-description-form.tsx and paste it as chapter-access-form.tsx on ../[chapterId]/_components
+-   Modify the chapter-access-form.tsx as we needed
+-   Add checkbox from shadcn
