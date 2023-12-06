@@ -80,3 +80,9 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+/* Text editor preview */
+.ql-container {
+  font-size: 16px !important;
+  font-family: Inter !important;
+}

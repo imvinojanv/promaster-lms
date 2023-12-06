@@ -21,7 +21,7 @@
 -   Create the constants file to store all constants details
 -   Create the Navbar component
 -   Create the mobile sidebar component
--   Create NavbarRoutes in the components folder for reuse later
+-   Create NavbarRoutes in the global components folder for reuse later
 -   Create the route for Teacher mode
 -   Create New course page (/teacher/create)
 -   Add Form, Input from Shadcn
@@ -70,7 +70,7 @@
 -   Modify the code as per our requirements
 -   Create route.ts inside the uploadthing folder
 -   Create uploadthing component in lib folder
--   Create file-upload component in the main components folder
+-   Create file-upload component in the global components folder
 -   Copy the description-form.tsx and paste it as image-form.tsx and make some changes
 -   Import image-form into page.tsx
 -   Update tailwind.config.js file for uploadthing
@@ -129,6 +129,18 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 
 ### Chapter Edit Page UI & Title
 -   Create the ChapterIdPage (../[courseId]/chapters/[chapterId]/page.tsx)
--   Create the _components folder inside the [chapterId]
+-   Create the _components folder inside the [chapterId] 
 -   Copy the title-form.tsx from [courseId]/_components and paste it here as chapter-title-form.tsx
+-   Modify the chapter-title-form.tsx as we needed
 -   Create a new api route for chapterId (../chapters/[chapterId]/route.ts)
+
+### Chapter Description Form
+-   Install React-Quill (`npm i react-quill`) : Rich Text Editor
+-   Create a new global component called editor.tsx
+-   Copy the editor.tsx and paste it as preview.tsx in the global components folder to preview the description text
+-   Do some changes on the preview.tsx component for preview the text
+-   Copy the description-form.tsx from [courseId]/_components and paste it here as chapter-description-form.tsx
+-   Modify the chapter-description-form.tsx as we needed
+-   The chapter description is working fine
+-   Get the preview using the preview component in page.tsx
+-   Add some css to change the style of Preview component text (global.css)
