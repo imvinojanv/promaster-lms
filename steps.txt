@@ -126,3 +126,9 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Create onReorder and onEdit function to update the bulk data to the db (chapters-form.tsx)
 -   Create a new api route for reorder (../[courseId]/chapters/reorder/route.ts)
 -   Add the loading state to indicate reordering the chapters list (chapters-form.tsx)
+
+### Chapter Edit Page UI & Title
+-   Create the ChapterIdPage (../[courseId]/chapters/[chapterId]/page.tsx)
+-   Create the _components folder inside the [chapterId]
+-   Copy the title-form.tsx from [courseId]/_components and paste it here as chapter-title-form.tsx
+-   Create a new api route for chapterId (../chapters/[chapterId]/route.ts)
