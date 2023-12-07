@@ -149,3 +149,15 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Copy the chapter-description-form.tsx and paste it as chapter-access-form.tsx on ../[chapterId]/_components
 -   Modify the chapter-access-form.tsx as we needed
 -   Add checkbox from shadcn
+
+### Mux Setup & Chapter Video Form
+-   Copy the image-form.tsx from [courseId]/_components and paste it here as chapter-video-form.tsx
+-   Modify the chapter-video-form.tsx as we needed
+-   Can able to upload the video now
+-   Create an account on mux.com (GitHub)
+-   Go to settings > Access tokens > Generate new token > SELECT 'Mux Video & Write' > Generate token > env variables
+-   Copy the variables and paste them into .env file
+-   Install Mux (`npm i @mux/mux-node` && `npm i @mux/mux-player-react`)
+-   Update the PATCH api route for Handling Video Upload 
+-   Text to upload a video and check it is available on Mux Video Assets
+-   Display the video using Mux Player

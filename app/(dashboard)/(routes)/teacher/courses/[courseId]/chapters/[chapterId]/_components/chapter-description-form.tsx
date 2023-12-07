@@ -86,7 +86,7 @@ const ChapterDescriptionForm = ({
             {!isEditing && (                        
                 <p className={cn(                   
                     "text-sm mt-2 rounded-md bg-white/50 border",
-                    !initialData.description && "text-slate-500 italic"
+                    !initialData.description && "text-slate-500 italic border-none bg-transparent"
                 )}>
                     {!initialData.description && "No description"}
                     {initialData.description && (

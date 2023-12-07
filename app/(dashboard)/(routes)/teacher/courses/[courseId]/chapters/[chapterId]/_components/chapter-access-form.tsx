@@ -87,7 +87,7 @@ const ChapterAccessForm = ({
 
             {/* changed */}
             {!isEditing && (
-                <p className="text-sm mt-2">
+                <div className="text-sm mt-2">
                     {initialData.isFree ? (
                         <div className="flex flex-row items-center space-x-2 space-y-0">
                             <Checkbox
@@ -102,7 +102,7 @@ const ChapterAccessForm = ({
                             This chapter is not FREE.
                         </p>
                     )}
-                </p>
+                </div>
             )}
 
             {isEditing && (
