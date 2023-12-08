@@ -165,13 +165,27 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 ### Chapter Publish Action
 -   Create a banner to identify the course or chapter is published (Global component)
 -   Wrap the entire div in ../[chapterId]/page.tsx by empty react fragment and calling the banner into the page
--   Add the buttons to publish && delete the chapters in page.tsx
+-   Create the chapter-actions.tsx component into the _components folder to add the buttons to publish && delete the chapters in chapter page
 -   Add alert-dialog from shadcn
 -   Create a new folder called models inside the global components folder, and create confirm-model.tsx
 -   Wrap the delete button by the ConfirmModel component
 -   Write a DELETE function with Unpublish entire course facility for the chapter (chapter-actions.tsx)
--   Write a DELETE api for delete chapter
+-   Write a DELETE route to delete chapter
 -   Check whether DELETE is working. 
 -   Write a PUBLISH / UNPUBLISH function for the chapter (chapter-actions.tsx)
 -   Create a new api route for publish chapter (../chapters/[chapterId]/publish/route.ts)
 -   Create a new api route for unpublish chapter (../chapters/[chapterId]/unpublish/route.ts)
+
+### Course Publish Action
+-   Wrap the entire div in ../[courseId]/page.tsx by empty react fragment
+-   Import and use the banner component here
+-   Copy the chapter-actions.tsx and paste it as actions.tsx to ../[courseId]/_components and modify a bit
+-   Write a DELETE route in ../[courseId]/route.ts to delete the entire course
+-   Create a new api route for publish chapter (../[courseId]/publish/route.ts)
+-   Create a new api route for unpublish chapter (../[courseId]/unpublish/route.ts)
+-   Install Zustand and (`npm i zustand` && `npm i react-confetti`) to throw the nice confetti when publish the course
+    (Zustand is a simple and powerful state management solution for React. It allows you to manage state in a simple and intuitive way. It mainly uses hooks as a means of communicating back and forth with the state.)
+-   Create a hook for confetti (hooks/use-confetti-store.ts)
+-   Create a confetti provider component (components/providers/confetti-provider.tsx)
+-   Add ConfettiProvider component into the app/layout.tsx
+-   Use the confetti on course actions component (../[courseId]/_components/actions.tsx)
