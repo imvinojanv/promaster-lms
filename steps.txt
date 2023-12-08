@@ -161,3 +161,17 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Update the PATCH api route for Handling Video Upload 
 -   Text to upload a video and check it is available on Mux Video Assets
 -   Display the video using Mux Player
+
+### Chapter Publish Action
+-   Create a banner to identify the course or chapter is published (Global component)
+-   Wrap the entire div in ../[chapterId]/page.tsx by empty react fragment and calling the banner into the page
+-   Add the buttons to publish && delete the chapters in page.tsx
+-   Add alert-dialog from shadcn
+-   Create a new folder called models inside the global components folder, and create confirm-model.tsx
+-   Wrap the delete button by the ConfirmModel component
+-   Write a DELETE function with Unpublish entire course facility for the chapter (chapter-actions.tsx)
+-   Write a DELETE api for delete chapter
+-   Check whether DELETE is working. 
+-   Write a PUBLISH / UNPUBLISH function for the chapter (chapter-actions.tsx)
+-   Create a new api route for publish chapter (../chapters/[chapterId]/publish/route.ts)
+-   Create a new api route for unpublish chapter (../chapters/[chapterId]/unpublish/route.ts)
