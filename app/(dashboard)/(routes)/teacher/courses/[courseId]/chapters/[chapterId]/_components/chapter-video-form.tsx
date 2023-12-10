@@ -3,12 +3,13 @@
 import * as z from "zod";
 import axios from "axios";
 import MuxPlayer from "@mux/mux-player-react";                  // changed - part 2
-import { Pencil, PlusCircle, Video } from "lucide-react";
+import { Pencil, PlusCircle, VideoIcon } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { Chapter, MuxData } from "@prisma/client";              // changed
 import Image from "next/image";
+import Video from 'next-video';
 
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
@@ -74,7 +75,7 @@ const ChapterVideoForm = ({
             {!isEditing && (
                 !initialData.videoUrl ? (
                     <div className="flex items-center justify-center h-60 bg-slate-200 rounded-md">
-                        <Video className="h-10 w-10 text-slate-500" />
+                        <VideoIcon className="h-10 w-10 text-slate-500" />
                     </div>
                 ) : (
                     <div className="relative aspect-video mt-2 rounded-md">
@@ -83,6 +84,9 @@ const ChapterVideoForm = ({
                         />
                     </div>
                 )
+                // <div className="relative aspect-video mt-2 rounded-md">
+                //     <Video src='https://utfs.io/f/81db0c85-f5e2-474c-9120-960cb9affe70-i2ci5i.mp4' />
+                // </div>
             )}
 
             {/* changed */}

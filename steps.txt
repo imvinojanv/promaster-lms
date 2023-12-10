@@ -189,3 +189,7 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Create a confetti provider component (components/providers/confetti-provider.tsx)
 -   Add ConfettiProvider component into the app/layout.tsx
 -   Use the confetti on course actions component (../[courseId]/_components/actions.tsx)
+
+### Test Next Video Player
+-   Install Next Video and Initiate it (`npm i next-video` && `npx next-video init`)
+-   Add Video URL and test the player
