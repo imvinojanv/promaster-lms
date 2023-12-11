@@ -207,3 +207,9 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Add filtering to the data table using shadcn docs (3)
 -   Add dropdown-menu from shadcn
 -   Add create new course button
+
+### Categories Query
+-   Install Query String and React Icons (`npm i query-string` && `npm i react-icons`)
+-   Modify the search page (../search/page.tsx)
+-   Create new component for categories (../search/_components/categories.tsx)
+-   Create new component for category-list (../search/_components/category-list.tsx) to list all categories
