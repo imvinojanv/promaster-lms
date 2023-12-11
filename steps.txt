@@ -193,3 +193,17 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 ### Test Next Video Player
 -   Install Next Video and Initiate it (`npm i next-video` && `npx next-video init`)
 -   Add Video URL and test the player
+
+### Courses Data Table
+-   Add table from shadcn
+-   Install React table dependancy (`npm install @tanstack/react-table`)
+-   Setup the structure according to the shadcn data table doc
+    > Create new component for columns.tsx (../courses/_components/columns.tsx) and paste the basic code
+    > Create data-table.tsx component at same folder and paste the basic code
+    > Setup the /courses/page.tsx to render the table
+-   Modify the data table as we needed.
+-   Add pagination to the data table using shadcn docs (1)
+-   Add sorting to the data table using shadcn docs (2)
+-   Add filtering to the data table using shadcn docs (3)
+-   Add dropdown-menu from shadcn
+-   Add create new course button

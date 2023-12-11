@@ -85,6 +85,7 @@ const ChapterVideoForm = ({
                     </div>
                 )
                 // <div className="relative aspect-video mt-2 rounded-md">
+                //     {/* Uploadthing-(2GB), Cloudinary-(25GB), Imagekit.io-(20GB), Filebase-(5GB) */}
                 //     <Video src='https://utfs.io/f/81db0c85-f5e2-474c-9120-960cb9affe70-i2ci5i.mp4' />
                 // </div>
             )}
