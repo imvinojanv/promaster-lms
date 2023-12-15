@@ -213,3 +213,9 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Modify the search page (../search/page.tsx)
 -   Create new component for categories (../search/_components/categories.tsx)
 -   Create new component for category-list (../search/_components/category-list.tsx) to list all categories
+
+### Search Query
+-   Create the hooks as use-debounce.ts 
+-   Create a new global component for search-input.tsx and add it to the NavbarRoutes component
+-   Push the search query to the route url
+-   Add the search input to mobile responsive as well
