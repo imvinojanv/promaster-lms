@@ -219,3 +219,15 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Create a new global component for search-input.tsx and add it to the NavbarRoutes component
 -   Push the search query to the route url
 -   Add the search input to mobile responsive as well
+
+### Course Grid & Card UI
+-   Create a new action function for get user progress (`/actions/get-progress.ts`)
+-   Create a new action function for get courses to load the courses for the search page (`/actions/get-courses.ts`)
+-   Update the prisma schema for fetching the courses propperly in get-courses.ts
+    > Update generator client
+    > Update the Course schema with @@fulltext([title])
+    > `npx prisma generate` && `npx prisma db push`
+    Now our courses searchable by title from the db
+-   Fetch the courses in searchPage using getCourses function by passing the userId and searchParams
+-   Create new global component for courses-list
+-   Create new global component for course-card

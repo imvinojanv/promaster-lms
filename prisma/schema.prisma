@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]       // updated for get-courses.ts
 }
 
 datasource db {
@@ -28,6 +29,7 @@ model Course {
   updatedAt DateTime @updatedAt
 
   @@index([categoryId])
+  @@fulltext([title])           // updated for get-courses.ts
 }
 
 model Category {
