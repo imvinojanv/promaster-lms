@@ -110,7 +110,7 @@ model Purchase {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt()
 
-  @@unique([userId, courseId])
+  @@unique([userId, courseId])     // Don't want it to be possible that user can purchase a course two times, so make the userId & chapterId are unique
   @@index([courseId])
 }
 

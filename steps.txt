@@ -231,3 +231,13 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Fetch the courses in searchPage using getCourses function by passing the userId and searchParams
 -   Create new global component for courses-list
 -   Create new global component for course-card
+
+### Course & Chapters Layout
+-   Create a new organizational group folder called '(course)'
+-   Create courseId page inside of this folder (app/(course)/courses/[courseId]/page.tsx)
+-   Create a new layout for CourseIdPage and fetch the course and progress on it
+-   Create a new component for CourseSidebar (../courses/[courseId]/_components)
+    > Update the prisma.schema according to the purchase needs into the CourseSidebar component
+    > `npx prisma generate` && `npx prisma db push`
+-   Create a new component for CourseSidebarItem
+-   Create a new component for CourseNavbar
