@@ -241,3 +241,24 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
     > `npx prisma generate` && `npx prisma db push`
 -   Create a new component for CourseSidebarItem
 -   Create a new component for CourseNavbar
+-   Create a new component for CourseMobileSidebar
+
+### Chapter HLS Video Player
+-   Create chapterId page inside of this folder (../[courseId]/chapters/[chapterId]/page.tsx)
+-   Modify the courseIdPage to immediately redirect to the first chapter when we click the course
+-   Create a new action function for get chapters (`/actions/get-chapters.ts`)
+-   Modify the chapterId page for the video player
+-   Create a new component for VideoPlayer (../chapters/[chapterId]/_components)
+
+
+Use hls.js library to handle video streaming
+
+
+
+## Run the application from scratch
+1.  Sync our prisma schema with database
+2.  Run the seed script
+3.  Run the application and create the course
+
+
+NOTE: `npx prisma migrate reset`  -   Reset the entire database
