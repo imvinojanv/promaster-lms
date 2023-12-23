@@ -250,6 +250,11 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Modify the chapterId page for the video player
 -   Create a new component for VideoPlayer (../chapters/[chapterId]/_components)
 
+### Course Purchase UI
+-   Create a new component for CourseEnrollButton (../chapters/[chapterId]/_components)
+-   Add separator from shadcn
+-   Add chapter description and attachments to the chapterId page
+
 
 Use hls.js library to handle video streaming
 
