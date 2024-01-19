@@ -86,3 +86,13 @@ body,
   font-size: 16px !important;
   font-family: Inter !important;
 }
+
+/* Hide the Clerk batch in Signin and Signup */
+.cl-internal-b3fm6y {
+  display: none !important;
+}
+
+/* Hide the Clerk logo from UserButton */
+.cl-internal-uyu30o {
+  display: none !important;
+}

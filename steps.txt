@@ -255,9 +255,28 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Add separator from shadcn
 -   Add chapter description and attachments to the chapterId page
 
+### Stripe Integration
+-   Go to the `stripe.com` and login
+-   Create 'New account' for this project (`promaster-lms`)
+-   Click 'API keys for developers'
+-   Copy the Secret key and paste it into .env (STRIPE_API_KEY)
+-   Install Stripe (`npm i stripe`)
+-   Create lib/stripe.ts file for the Stripe Integration
+-   Create a new api route for checkout (../courses/[courseId]/checkout/route.ts)
+-   Add NEXT_PUBLIC_APP_URL variable in .env file for Stripe 
+-   Setup the Stripe cli webhook
+    (Test in a local environment > follow the instructions)
+    Copy the webhook signing secret and paste it into .env file
+    Create a new api webhook for stripe (api/webhook/route.ts)
+-   write a button function to purchase the course in `(course)/.../[chapterId]/_components/course-enroll-button.tsx`
+-   To test, make sure the stripe local cli is running (`stripe listen --forward-to localhost:3000/api/webhook`)
+
+
+
+
+/////////////////////////////////////////////////////////
 
 Use hls.js library to handle video streaming
-
 
 
 ## Run the application from scratch
