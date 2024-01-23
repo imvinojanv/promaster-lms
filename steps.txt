@@ -271,6 +271,19 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   write a button function to purchase the course in `(course)/.../[chapterId]/_components/course-enroll-button.tsx`
 -   To test, make sure the stripe local cli is running (`stripe listen --forward-to localhost:3000/api/webhook`)
 
+### Chapter Progress Functionality
+-   Create a new global component for CourseProgress 
+    And call it into course-sidebar.tsx component
+-   Add progress from shadcn
+-   Update the ui/progress component with progressVariants
+-   Add the CourseProgress component to the CourseCard for searchPage
+-   Add button function to trigger to completion of chapter in ChapterIdPage
+-   Create a new component for CourseProgressButton (../chapters/[chapterId]/_components)
+    Add 'success' varient to the Button component
+-   Create a new api route for checkout (../chapters/[chapterId]/progress)
+-   Also enable the VideoPlayer to complete the chapter if its reaches to the end
+    Update the onEnded function on VideoPlayer component (../chapters/[chapterId]/_components)
+
 
 
 

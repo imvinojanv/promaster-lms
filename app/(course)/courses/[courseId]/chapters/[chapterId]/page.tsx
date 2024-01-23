@@ -9,6 +9,7 @@ import Preview from "@/components/preview";
 
 import VideoPlayer from "./_components/video-player";
 import CourseEnrollButton from "./_components/course-enroll-button";
+import CourseProgressButton from "./_components/course-progress-button";
 
 
 const ChapterIdPage = async ({
@@ -42,7 +43,7 @@ const ChapterIdPage = async ({
   }
 
   const isLocked = !chapter.isFree && !purchase;        // if the chapter is not FREE & if don't purchase yet
-  const completeOnEnd = !!purchase && !userProgress?.isCompleted;       // if we purchase & if user progress is completed (using !! if for turn the purchase into a boolean)
+  const completeOnEnd = !!purchase && !userProgress?.isCompleted;       // if we purchase & if user progress is not completed (using !! if for turn the purchase into a boolean)
 
   return (
     <div>
@@ -78,9 +79,12 @@ const ChapterIdPage = async ({
               {chapter.title}
             </h2>
             {purchase ? (
-              <div>
-                {/* TODO: Add CourseProgressButton */}
-              </div>
+              <CourseProgressButton 
+                chapterId={params.chapterId}
+                courseId={params.courseId}
+                nextChapterId={nextChapter?.id}
+                isCompleted={!!userProgress?.isCompleted}     // !! - boolean
+              />
             ): (
               <CourseEnrollButton
                 courseId={params.courseId}

@@ -30,6 +30,31 @@ const VideoPlayer = ({
     title,
 }: VideoPlayerProps) => {
     const [isReady, setIsReady] = useState(false);
+    const router = useRouter();
+    const confetti = useConfettiStore();
+
+    const onEnd = async () => {
+        try {
+            if (completeOnEnd) {        // if we purchase & if user progress is not completed
+                await axios.put(`/api/courses/${courseId}/chapters/${chapterId}/progress`, {
+                    isCompleted: true,
+                });
+
+                if (!nextChapterId) {
+                    confetti.onOpen();
+                }
+
+                toast.success("Progress updated");
+                router.refresh();
+
+                if (nextChapterId) {        // only redirect to the next chapter when isCompleted: false otherwise stay on the same chapter
+                    router.push(`/courses/${courseId}/chapters/${nextChapterId}`)
+                }
+            }
+        } catch {
+            toast.error("Something went wrong");
+        }
+    }
 
     return (
         <div className="relative aspect-video">
@@ -53,7 +78,7 @@ const VideoPlayer = ({
                         !isReady && "hidden"
                     )}
                     onCanPlay={() => setIsReady(true)}
-                    onEnded={()=> {}}
+                    onEnded={() => { }}
                     autoPlay
                     playbackId={playbackId}
                 />
