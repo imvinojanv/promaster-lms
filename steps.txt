@@ -308,6 +308,23 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
     `api/uploadthing/core.ts` and `api/courses/route.ts`,
     Note: That's enoght to protect the `api/courses/route.ts` (the POST funtion), bcz for other routes, it's usually checked the courseOwner so other users can not use them without creating a course
 
+### Deployment
+-   Add a new script on package.json for the prisma (`"postinstall": "prisma generate"`)
+-   Push to git from local environment (local git -> github repo)
+-   Go to the vercel.com and create a new project
+    Import the Git repository
+    Add environment variable
+    change these variables (
+        NEXT_PUBLIC_APP_URL: as deployed url (add without back slash),
+        STRIPE_WEBHOOK_SECRET: {
+            go to the stripe dashboard > Developers > Webhooks > Add an endpoint > verify using the password
+            paste the deployed_url/webhook_path as the Endpoint URL (`deployed_url/api/webhook)
+            select events (checkout > checkout.session.completed) > finally "Add endpoint"
+            Copy the 'Signing secret' and paste it as `STRIPE_WEBHOOK_SECRET` in vercel environment
+        } 
+    )
+    Redeploy the application (without cache)
+
 
 
 /////////////////////////////////////////////////////////
