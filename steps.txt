@@ -290,6 +290,14 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Get the courses in DashboardPage using the getDashboardCourses function
 -   Create a new component for InfoCard (../(root)/_components)
 
+### Teacher Analytics Dashboard
+-   Create new action file for get analytics (`/actions/get-analytics.ts`)
+-   Modify the AnalyticsPage (`../(routes)/teacher/analytics/page.tsx`)
+-   Add card from shadcn
+-   Create a new component for DataCard (../teacher/analytics/_components)
+-   Install Recharts (`npm i recharts`)
+-   Create a new component for Chart (../teacher/analytics/_components)
+
 
 
 
