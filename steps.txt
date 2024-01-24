@@ -284,6 +284,12 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Also enable the VideoPlayer to complete the chapter if its reaches to the end
     Update the onEnded function on VideoPlayer component (../chapters/[chapterId]/_components)
 
+### Student Dashboard
+-   Change the DashboardPage path (../(routes) -> ../(routes)/(root)/page.tsx)
+-   Create new action file for get dashboard courses (`/actions/get-dashboard-courses.ts`)
+-   Get the courses in DashboardPage using the getDashboardCourses function
+-   Create a new component for InfoCard (../(root)/_components)
+
 
 
 
