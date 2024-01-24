@@ -298,6 +298,15 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
 -   Install Recharts (`npm i recharts`)
 -   Create a new component for Chart (../teacher/analytics/_components)
 
+### Admin Protection
+-   Create new lib file for teacher to protect page (`/lib/teacher.ts`)
+-   Define the NEXT_PUBLIC_TEACHER_ID as a Teacher id in .env
+-   Protect the Navbar button using isTeacher lib file
+-   Protect the teacher routes (frontend) from other users
+    Create a layout file for the teacher and call the isTeacher lib and redirect
+-   Protect the teacher api routes (backend) from other users
+    `api/uploadthing/core.ts` and `api/courses/route.ts`,
+    Note: That's enoght to protect the `api/courses/route.ts` (the POST funtion), bcz for other routes, it's usually checked the courseOwner so other users can not use them without creating a course
 
 
 

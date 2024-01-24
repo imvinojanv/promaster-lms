@@ -2,6 +2,7 @@ import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
 import { db } from "@/lib/db";
+import { isTeacher } from "@/lib/teacher";
 
 export async function POST(
     req: Request,
@@ -10,7 +11,9 @@ export async function POST(
         const { userId } = auth();
         const { title } = await req.json();
 
-        if (!userId) {
+        const isAuthorized = isTeacher(userId);
+
+        if (!userId || !isAuthorized) {                                 // protect the api routes from other users
             return new NextResponse("Unautherized", { status: 401 })
         }
 
