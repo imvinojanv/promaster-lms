@@ -325,6 +325,10 @@ Related files: middleware.ts, next.config.js, tailwind.config.js, [courseId]/pag
     )
     Redeploy the application (without cache)
 
+### Fix Deployment Errors
+-   Modify ChaptersList component with the proper types
+-   Merge the CategoryForm and Combobox components together to fix types issues
+
 
 
 /////////////////////////////////////////////////////////

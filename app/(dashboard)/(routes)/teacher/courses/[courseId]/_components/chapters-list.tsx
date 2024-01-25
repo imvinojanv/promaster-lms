@@ -1,7 +1,7 @@
 "use client"
 
 import { Chapter } from "@prisma/client";
-import { useEffect, useState } from "react";
+import { DetailedHTMLProps, HTMLAttributes, CSSProperties , useEffect, useState } from "react";
 import {
     DragDropContext,
     Droppable,
@@ -66,7 +66,11 @@ const ChaptersList = ({
         <DragDropContext onDragEnd={onDragEnd}>
             <Droppable droppableId="chapters">
                 {(provided) => (
-                    <div {...provided.droppableProps} ref={provided.innerRef}>
+                    <div 
+                        {...provided.droppableProps} 
+                        ref={provided.innerRef}
+                        {...(provided.droppableProps as DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>)}     // optional
+                    >
                         {chapters.map((chapter, index) => (
                             <Draggable
                                 key={chapter.id}
@@ -75,12 +79,15 @@ const ChaptersList = ({
                             >
                                 {(provided) => (
                                     <div
+                                        ref={provided.innerRef}
+                                        {...provided.draggableProps}
+                                        {...provided.dragHandleProps}       // optional
+                                        {...(provided.draggableProps as DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>)}     // optional
+                                        style={provided.draggableProps.style as CSSProperties}      // to fix deployment error
                                         className={cn(
                                             "flex items-center gap-x-2 bg-slate-200 border-slate-200 border text-slate-700 rounded-md mb-4 text-sm",
                                             chapter.isPublished && "bg-sky-100 border-sky-200 text-sky-700"
                                         )}
-                                        ref={provided.innerRef}
-                                        {...provided.draggableProps}
                                     >
                                         <div
                                             className={cn(

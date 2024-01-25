@@ -45,7 +45,10 @@ export const TitleForm = ({
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
-        defaultValues: initialData,
+        // defaultValues: initialData,
+        defaultValues: {
+            title: initialData?.title
+        },
     });
 
     const { isSubmitting, isValid } = form.formState;
