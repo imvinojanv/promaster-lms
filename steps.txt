@@ -23,8 +23,10 @@
 -   Create the mobile sidebar component
 -   Create NavbarRoutes in the global components folder for reuse later
 -   Create the route for Teacher mode
+
+### Course Creation UI
+-   Add Form, Input from Shadcn (it's also have include zod and hooks etc...)
 -   Create New course page (/teacher/create)
--   Add Form, Input from Shadcn
 -   Install axios
 -   Design the form component for create course page and add the toast alert by installing it (react-hot-toast)
 -   Create the toaster provider inside the component folder and import and return the Toaster from react-hot-toast
@@ -32,11 +34,11 @@
 
 ### Prisma & DB Setup 
 -   Install Prisma (npm i -D prisma)
--   installing the Prisma into our project (npz prisma init)
+-   Initiate the Prisma into our project (npx prisma init)
 -   Create a database in Planetscale
 -   Copy and Paste .env and prisma.schema
--   Create db.ts file into the lib folder
 -   Install prisma client (npm i @prisma/client)
+-   Create db.ts file into the lib folder
 -   Create models for Course, Attachment and Category in prisma.schema
 -   Generate prisma everytime you play around with prisma (npx prisma generate) - Locally
 -   Push the generated schema to database (npx prisma db push) - to Planetscale
@@ -341,5 +343,6 @@ Use hls.js library to handle video streaming
 2.  Run the seed script
 3.  Run the application and create the course
 
+npx prisma migrate dev --name init
 
 NOTE: `npx prisma migrate reset`  -   Reset the entire database
